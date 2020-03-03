@@ -1,0 +1,61 @@
+<html>
+<head>
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+} html {
+    text-align: center;
+} nav {
+    background-color: blue;
+    color: white;
+} a {
+    color: white;
+    text-decoration: none;
+} button {
+    margin-top: 10vh;
+    height: 5vh;
+    width: 20vh;
+    color: black;
+    background-color: white;
+} body {
+    background-color: gray;
+} input {
+    margin-top: 10vh;
+    text-align: center;
+    width: 20vh;
+} #output {
+    margin-top: -40vh;
+    color: white;
+    background-color: gray;
+    text-align: center;
+    font-size: 10vh;
+} #Hello {
+    color: white;
+    margin-top: 10vh;
+}
+</style>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<body>
+<h1 id="Hello">Hello What is Your Name?</h1>
+<br>
+<input type="text" name="text" id="text" placeholder="Name"></input>
+<br>
+<button id="change" onclick="action();">Submit</button>
+<div id="output"></div>
+<script>
+function action() {
+    var hello = document.querySelector('#Hello');
+    hello.style.visibility = "hidden";
+    var button = document.querySelector('#change');
+    button.style.visibility = "hidden";
+    var input = document.querySelector('input');
+    input.style.visibility = "hidden";
+    var input = document.querySelector('#text').value;
+    var output = document.querySelector('#output');
+    output.innerHTML = "<h1>Greetings, " + "<h1>" + input + "</h1>";
+};
+</script>
+</body>
+</html>
